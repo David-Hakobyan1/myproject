@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="color:teal;">Welcome to the game <q>who want to be a millionaire?</q></h1><br><br><br>
+
+<h1 style="color:blue;">{{mylis[0]}}</h1>
+
+{% for el in mylis[1].split(",") %}
+  <p>{{el}}</p>
+{% endfor %}
+
+<form method="POST" action="{{url_for('mill.millioner_check')}}">
+  {{ form.hidden_tag() }}
+  {{ form.fnum.label() }}{{ form.fnum }}
+  {{form.play}}
+</form>
+
+{% if info== "Right" %}
+  <p style="color:green;"><b>{{info}}</b></p>
+{% else %}
+  <p style="color:red;"><b>{{info}}</b></p>
+{% endif %}
+
+{% endblock %}
