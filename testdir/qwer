@@ -1,1 +1,3 @@
-asdff
+git add <target directory or file>
+git commit -m "message"
+git push
