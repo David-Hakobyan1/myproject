@@ -34,6 +34,7 @@ from project.error_pages.handlers import error_pages
 from project.games.views import games
 from project.games.millioner.views import mill
 from project.games.pole_chudes.views import pole
+from project.games.chingachung.views import ching
 
 app.register_blueprint(core)
 app.register_blueprint(users)
@@ -42,3 +43,4 @@ app.register_blueprint(error_pages)
 app.register_blueprint(games)
 app.register_blueprint(mill)
 app.register_blueprint(pole)
+app.register_blueprint(ching)
