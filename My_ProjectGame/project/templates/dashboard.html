@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 style="color:teal;">Welcome to top list of players</q></h1><br><br><br>
+{%for user in users%}
+<p>User ID:{{user.user_id}} {{user.username}} Points:{{user.number}}<br>
+{%endfor%}
+
+{% endblock %}

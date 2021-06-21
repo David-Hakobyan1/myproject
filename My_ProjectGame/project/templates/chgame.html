@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 style="color:teal;">Welcome ChingaChung game</h1>
+{% for i in my_list %}
+  <p style="color:blue;">{{i}}</p>
+{% endfor %}
+<form method="POST" action="{{url_for('ching.chingachung_check')}}">
+  {{ form.hidden_tag() }}
+  {{ form.fnum.label() }}{{ form.fnum }}
+  {{form.play}}
+</form>
+{% if info != "start" %}
+  <p>{{fnum}} and {{player2}}</p>
+{% else %}
+  <p>your choice and opponent's choice</p>
+{% endif %}
+<p>{{number1}} : {{number2}}</p>
+
+{% endblock %}
